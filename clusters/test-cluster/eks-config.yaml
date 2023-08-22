@@ -1,0 +1,70 @@
+---
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: test-cluster
+  region: us-east-1
+  version: "1.27"
+  tags:
+    Cluster: test-cluster
+
+# vpc:
+#   id: "vpc-78a2071d"
+#   subnets:
+#     public:
+#       elife-kubernetes-worker-subnet-1:
+#         id: "subnet-07e912335040a0866"
+#         az: "us-east-1d"
+#       elife-kubernetes-worker-subnet-2:
+#         id: "subnet-0110e7685debdb5eb"
+#         az: "us-east-1c"
+
+nodeGroups:
+  - name: ng1
+    instanceType: t3.large
+    desiredCapacity: 2
+    # subnets:
+    # - elife-kubernetes-worker-subnet-1
+    # - elife-kubernetes-worker-subnet-2
+    iam:
+      withAddonPolicies:
+        autoScaler: true
+        ebs: true
+        externalDNS: true
+        awsLoadBalancerController: true
+        certManager: true
+
+iam:
+  withOIDC: true
+
+iamIdentityMappings:
+  - arn: arn:aws:iam::512686554592:user/ScottAubrey
+    groups:
+      - system:masters
+    username: scottaubrey
+  # - arn: arn:aws:iam::512686554592:user/nathanlisgo
+  #   groups:
+  #     - system:masters
+  #   username: nathanlisgo
+
+addons:
+- name: coredns
+- name: kube-proxy
+- name: aws-ebs-csi-driver
+- name: vpc-cni
+
+gitops:
+  flux:
+    gitProvider: github
+    flags:
+      owner: "elifesciences"
+      repository: "elife-clusters"
+      branch: "master"
+      path: "clusters/test-cluster/flux"
+      components-extra: "image-reflector-controller,image-automation-controller"
+      read-write-key: "true"
+
+# karpenter:
+#   version: 'v0.29.2'
+#   createServiceAccount: true
