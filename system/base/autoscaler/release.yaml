@@ -21,7 +21,7 @@ spec:
       tags:
       - kubernetes.io/cluster/${cluster_name}
     awsRegion: ${aws_region}
-    # rbac:
-    #   serviceAccount:
-    #     annotations:
-    #       eks.amazonaws.com/role-arn: arn:aws:iam::${aws_account_id}:role/kubernetes-aws--flux-test--kubernetes-autoscaler
+    rbac:
+      serviceAccount:
+        annotations:
+          eks.amazonaws.com/role-arn: arn:aws:iam::${aws_account_id}:role/cluster-autoscaler
