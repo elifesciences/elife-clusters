@@ -18,3 +18,5 @@ spec:
     substitute:
       cluster_name: test-cluster
       cluster_domain: test-cluster.elifesciences.org
+      aws_account_id: 512686554592
+      aws_region: us-east-1
