@@ -9,24 +9,10 @@ metadata:
   tags:
     Cluster: test-cluster
 
-# vpc:
-#   id: "vpc-78a2071d"
-#   subnets:
-#     public:
-#       elife-kubernetes-worker-subnet-1:
-#         id: "subnet-07e912335040a0866"
-#         az: "us-east-1d"
-#       elife-kubernetes-worker-subnet-2:
-#         id: "subnet-0110e7685debdb5eb"
-#         az: "us-east-1c"
-
 nodeGroups:
   - name: ng1
     instanceType: t3.large
     desiredCapacity: 2
-    # subnets:
-    # - elife-kubernetes-worker-subnet-1
-    # - elife-kubernetes-worker-subnet-2
     iam:
       withAddonPolicies:
         autoScaler: true
