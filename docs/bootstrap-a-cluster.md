@@ -19,5 +19,5 @@ If this is a brand new cluster i.e. no current definitions.
 
 ## Destroy a cluster
 
-- Run `eksctl delete cluster -f "clusters/{test-cluster}/eks-config.yaml" --wait --disable-nodegroup-eviction`
-- optionally run: `eksctl delete cluster -f "clusters/{test-cluster}/eks-config.yaml" --wait --disable-nodegroup-eviction` (or deal with failed evictions manually)
+- Run `eksctl delete cluster -f "clusters/{test-cluster}/eks-config.yaml" --wait`
+- You may need to manually deal with any services that have pod disruption budgets. If you are aware this will already be a problem, and are willing to evict the pods regardless, you can use `eksctl delete cluster -f "clusters/{test-cluster}/eks-config.yaml" --wait --disable-nodegroup-eviction`
