@@ -28,17 +28,16 @@ iam:
     wellKnownPolicies:
       autoScaler: true
     roleName: cluster-autoscaler-aws-cluster-autoscaler
-    # roleOnly: true
 
 iamIdentityMappings:
   - arn: arn:aws:iam::512686554592:user/ScottAubrey
     groups:
       - system:masters
     username: scottaubrey
-  # - arn: arn:aws:iam::512686554592:user/nathanlisgo
-  #   groups:
-  #     - system:masters
-  #   username: nathanlisgo
+  - arn: arn:aws:iam::512686554592:user/nathanlisgo
+    groups:
+      - system:masters
+    username: nathanlisgo
 
 addons:
 - name: coredns
