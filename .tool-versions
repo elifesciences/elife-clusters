@@ -1,3 +1,4 @@
-kubectl 1.27.3
+kubectl 1.27.4
 eksctl 0.153.0
 flux2 2.0.1
+stern 1.26.0
