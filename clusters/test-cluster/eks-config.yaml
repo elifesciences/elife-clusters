@@ -23,11 +23,12 @@ iam:
   withOIDC: true
   serviceAccounts:
   - metadata:
-      name: cluster-autoscaler
+      name: cluster-autoscaler-aws-cluster-autoscaler
       namespace: kube-system
     wellKnownPolicies:
       autoScaler: true
-    roleName: cluster-autoscaler-aws-cluster-autoscaler
+    roleName: cluster-autoscaler
+    roleOnly: true
 
 iamIdentityMappings:
   - arn: arn:aws:iam::512686554592:user/ScottAubrey
