@@ -3,7 +3,7 @@
   "kubernetes": {
     "fileMatch": [
       "system/.+\\.yaml$",
-      "infrastructure/.+\\.yaml$"
+      "infrastructure/.+\\.yaml$",
       "apps/.+\\.yaml$"
     ]
   },
