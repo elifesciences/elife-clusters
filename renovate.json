@@ -1,0 +1,32 @@
+{
+  "extends": ["config:base", ":prHourlyLimitNone"],
+  "kubernetes": {
+    "fileMatch": [
+      "system/.+\\.yaml$",
+      "infrastructure/.+\\.yaml$"
+      "apps/.+\\.yaml$"
+    ]
+  },
+  "assignees": [
+    "scottaubrey"
+  ],
+  "flux": {
+    "fileMatch": ["clusters/.+\\.yaml$", "system/.+\\.yaml$", "infrastructure/.+\\.yaml$", "apps/.+\\.yaml$"]
+  },
+  "packageRules": [
+    {
+      "matchPackageNames": ["descheduler"],
+      "enabled": false
+    },
+    {
+      "matchPackageNames": ["airflow"],
+      "additionalBranchPrefix": "{{packageFile}}-",
+      "commitMessage": "{{{commitMessagePrefix}}} {{{commitMessageAction}}} {{{commitMessageTopic}}} {{{packageFile}}} {{{commitMessageExtra}}} {{{commitMessageSuffix}}}"
+    },
+    {
+      "matchFileNames": [".tool-versions"],
+      "matchPackageNames": ["kubectl"],
+      "enabled": false
+    }
+  ]
+}
