@@ -3,4 +3,7 @@ kind: Kustomization
 commonLabels:
   service_type: system
 resources:
-- ../../classes/eks
+- ../../base/kube-system
+- ../../base/certificate-system
+- ../../base/autoscaler-system
+
