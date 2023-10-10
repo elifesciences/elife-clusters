@@ -4,3 +4,4 @@ namespace: kube-system
 resources:
 - ../../base/descheduler
 - ../../base/autoscaler
+- ../../base/cert-manager
