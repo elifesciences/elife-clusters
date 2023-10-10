@@ -17,7 +17,5 @@ spec:
     remediation:
       retries: 5
   values:
-    installCRDs: false
-    prometheus:
-      servicemonitor:
-        enabled: false
+    authSecret:
+      enabled: false # We inject them from secure secrets
