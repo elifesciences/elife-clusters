@@ -6,15 +6,15 @@ metadata:
   namespace: flux-system
 spec:
   interval: 10m0s
-  path: ./system/clusters/kubepi
+  path: ./infrastructure/clusters/test-cluster
   prune: true
   sourceRef:
     kind: GitRepository
     name: flux-system
   commonMetadata:
     labels:
-      cluster: kubepi
+      cluster: test-cluster
   postBuild:
     substitute:
-      cluster_name: kubepi
-      cluster_domain: kubepi.elifesciences.org
+      cluster_name: test-cluster
+      cluster_domain: test-cluster.elifesciences.org
