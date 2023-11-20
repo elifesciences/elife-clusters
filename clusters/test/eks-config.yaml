@@ -14,10 +14,6 @@ nodeGroups:
     instanceType: t3.large
     desiredCapacity: 2
     privateNetworking: true
-    iam:
-      withAddonPolicies:
-        ebs: true
-        awsLoadBalancerController: true
 
 iam:
   withOIDC: true
