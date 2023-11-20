@@ -17,7 +17,6 @@ nodeGroups:
     iam:
       withAddonPolicies:
         ebs: true
-        externalDNS: true
         awsLoadBalancerController: true
 
 iam:
@@ -28,14 +27,14 @@ iam:
       namespace: kube-system
     wellKnownPolicies:
       autoScaler: true
-    roleName: eksctl-test-cluster-ServiceRole-cluster-autoscaler
+    roleName: eksctl-test-ServiceRole-autoscaler
     roleOnly: true
   - metadata:
       name: external-dns-external-dns
       namespace: external-dns
     wellKnownPolicies:
       externalDNS: true
-    roleName: eksctl-test-cluster-ServiceRole-external-dns
+    roleName: eksctl-test-ServiceRole-external-dns
     roleOnly: true
 
 iamIdentityMappings:
