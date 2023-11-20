@@ -6,4 +6,5 @@ resources:
 - ../../base/kube-system
 - ../../base/certificate-system
 - ../../base/autoscaler-system
+- ../../base/metrics-server
 
