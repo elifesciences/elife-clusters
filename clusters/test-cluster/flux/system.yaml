@@ -14,6 +14,7 @@ spec:
   commonMetadata:
     labels:
       cluster: test-cluster
+      kustomization: system
   postBuild:
     substitute:
       cluster_name: test-cluster

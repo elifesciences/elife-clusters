@@ -29,6 +29,13 @@ iam:
       autoScaler: true
     roleName: cluster-autoscaler
     roleOnly: true
+  - metadata:
+      name: external-dns-external-dns
+      namespace: external-dns
+    wellKnownPolicies:
+      externalDNS: true
+    roleName: external-dns
+    roleOnly: true
 
 iamIdentityMappings:
   - arn: arn:aws:iam::512686554592:user/ScottAubrey
