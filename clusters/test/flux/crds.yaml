@@ -6,16 +6,16 @@ metadata:
   namespace: flux-system
 spec:
   interval: 10m0s
-  path: ./crds/clusters/test-cluster
+  path: ./crds/clusters/test
   prune: true
   sourceRef:
     kind: GitRepository
     name: flux-system
   commonMetadata:
     labels:
-      cluster: test-cluster
+      cluster: test
       kustomization: crds
   postBuild:
     substitute:
-      cluster_name: test-cluster
-      cluster_domain: test-cluster.elifesciences.org
+      cluster_name: test
+      cluster_domain: test.cluster.elifesciences.org

@@ -3,11 +3,11 @@ apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
 metadata:
-  name: test-cluster
+  name: test
   region: us-east-1
   version: "1.27"
   tags:
-    Cluster: test-cluster
+    Cluster: test
 
 nodeGroups:
   - name: ng1
@@ -28,14 +28,14 @@ iam:
       namespace: kube-system
     wellKnownPolicies:
       autoScaler: true
-    roleName: eksctl-test-cluster-cluster-ServiceRole-cluster-autoscaler
+    roleName: eksctl-test-cluster-ServiceRole-cluster-autoscaler
     roleOnly: true
   - metadata:
       name: external-dns-external-dns
       namespace: external-dns
     wellKnownPolicies:
       externalDNS: true
-    roleName: eksctl-test-cluster-cluster-ServiceRole-external-dns
+    roleName: eksctl-test-cluster-ServiceRole-external-dns
     roleOnly: true
 
 iamIdentityMappings:
@@ -61,7 +61,7 @@ gitops:
       owner: "elifesciences"
       repository: "elife-clusters"
       branch: "master"
-      path: "clusters/test-cluster/flux"
+      path: "clusters/test/flux"
       components-extra: "image-reflector-controller,image-automation-controller"
       read-write-key: "true"
 
