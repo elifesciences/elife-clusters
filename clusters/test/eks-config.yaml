@@ -19,7 +19,7 @@ iam:
   withOIDC: true
   serviceAccounts:
   - metadata:
-      name: cluster-autoscaler-aws-cluster-autoscaler
+      name: cluster-autoscaler
       namespace: autoscaler-system
     wellKnownPolicies:
       autoScaler: true

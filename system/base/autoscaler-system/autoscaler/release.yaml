@@ -23,5 +23,6 @@ spec:
     awsRegion: ${aws_region}
     rbac:
       serviceAccount:
+        name: cluster-autoscaler
         annotations:
           eks.amazonaws.com/role-arn: ${autoscaler_service_account_role_arn}
