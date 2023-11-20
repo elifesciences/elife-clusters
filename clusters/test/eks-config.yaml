@@ -20,13 +20,13 @@ iam:
   serviceAccounts:
   - metadata:
       name: cluster-autoscaler-aws-cluster-autoscaler
-      namespace: kube-system
+      namespace: autoscaler-system
     wellKnownPolicies:
       autoScaler: true
     roleName: eksctl-test-cluster-ServiceRole-autoscaler
     roleOnly: true
   - metadata:
-      name: external-dns-external-dns
+      name: external-dns
       namespace: external-dns
     wellKnownPolicies:
       externalDNS: true
