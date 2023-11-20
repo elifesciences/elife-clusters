@@ -16,7 +16,7 @@ spec:
       cluster: test
       kustomization: system
   dependsOn:
-  - crds
+  - name: crds
   postBuild:
     substitute:
       cluster_name: test

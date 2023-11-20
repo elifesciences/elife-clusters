@@ -16,7 +16,7 @@ spec:
       cluster: test
       kustomization: infrastructure
   dependsOn:
-  - system
+  - name: system
   postBuild:
     substitute:
       cluster_name: test
