@@ -4,3 +4,4 @@ resources:
 - ../../base/kubeseal
 - ../../base/external-dns
 - ../../base/ingress-system
+- ../../base/oauth2-proxy
