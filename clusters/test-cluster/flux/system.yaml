@@ -21,3 +21,6 @@ spec:
       cluster_domain: test-cluster.elifesciences.org
       aws_account_id: "512686554592"
       aws_region: us-east-1
+
+        # service account arns
+      autoscaler_service_account_role_arn: arn:aws:iam::512686554592:role/eksctl-test-cluster-cluster-ServiceRole-cluster-autoscaler

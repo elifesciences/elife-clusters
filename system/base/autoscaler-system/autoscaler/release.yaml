@@ -24,4 +24,4 @@ spec:
     rbac:
       serviceAccount:
         annotations:
-          eks.amazonaws.com/role-arn: arn:aws:iam::${aws_account_id}:role/cluster-autoscaler
+          eks.amazonaws.com/role-arn: ${autoscaler_service_account_role_arn}
