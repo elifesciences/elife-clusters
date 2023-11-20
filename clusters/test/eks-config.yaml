@@ -27,14 +27,14 @@ iam:
       namespace: kube-system
     wellKnownPolicies:
       autoScaler: true
-    roleName: eksctl-test-ServiceRole-autoscaler
+    roleName: eksctl-test-cluster-ServiceRole-autoscaler
     roleOnly: true
   - metadata:
       name: external-dns-external-dns
       namespace: external-dns
     wellKnownPolicies:
       externalDNS: true
-    roleName: eksctl-test-ServiceRole-external-dns
+    roleName: eksctl-test-cluster-ServiceRole-external-dns
     roleOnly: true
 
 iamIdentityMappings:
