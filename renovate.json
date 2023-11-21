@@ -1,12 +1,5 @@
 {
   "extends": ["config:base", ":prHourlyLimitNone"],
-  "kubernetes": {
-    "fileMatch": [
-      "system/.+\\.yaml$",
-      "infrastructure/.+\\.yaml$",
-      "apps/.+\\.yaml$"
-    ]
-  },
   "assignees": [
     "scottaubrey"
   ],
