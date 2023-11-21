@@ -7,3 +7,4 @@ resources:
 - ../../base/certificate-system
 - ../../base/autoscaler-system
 - ../../base/metrics-server
+- ../../base/external-dns
