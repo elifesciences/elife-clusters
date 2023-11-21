@@ -4,3 +4,4 @@ namespace: kube-system
 resources:
 - descheduler
 - aws-load-balancer-controller
+- sealed-secrets
