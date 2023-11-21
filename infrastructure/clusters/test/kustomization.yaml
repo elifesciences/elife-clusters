@@ -4,3 +4,4 @@ resources:
 - ../../base/ingress-system
 - ../../base/oauth2-proxy
 - ../../base/monitoring-system
+- ../../base/logging-system
