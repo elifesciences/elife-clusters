@@ -8,6 +8,7 @@ metadata:
   version: "1.27"
   tags:
     Cluster: test
+    Environment: flux-test
 
 nodeGroups:
   - name: ng1
