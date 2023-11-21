@@ -24,5 +24,6 @@ spec:
       aws_account_id: "512686554592"
       aws_region: us-east-1
 
-        # service account arns
+      # service account arns
       autoscaler_service_account_role_arn: arn:aws:iam::512686554592:role/eksctl-test-cluster-ServiceRole-autoscaler
+      aws_load_balancer_controller_service_account_role_arn: arn:aws:iam::512686554592:role/eksctl-test-cluster-ServiceRole-aws-load-balancer-controller

@@ -7,4 +7,3 @@ resources:
 - ../../base/certificate-system
 - ../../base/autoscaler-system
 - ../../base/metrics-server
-

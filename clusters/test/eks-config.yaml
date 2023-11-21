@@ -33,6 +33,13 @@ iam:
       externalDNS: true
     roleName: eksctl-test-cluster-ServiceRole-external-dns
     roleOnly: true
+  - metadata:
+      name: aws-load-balancer-controller
+      namespace: kube-system
+    wellKnownPolicies:
+      awsLoadBalancerController: true
+    roleName: eksctl-test-cluster-ServiceRole-aws-load-balancer-controller
+    roleOnly: true
 
 iamIdentityMappings:
   - arn: arn:aws:iam::512686554592:user/ScottAubrey
