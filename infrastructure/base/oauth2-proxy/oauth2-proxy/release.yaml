@@ -16,7 +16,8 @@ spec:
         name: oauth2-proxy
       interval: 1m
   values:
-
+    config:
+      existingSecret: oauth2-proxy-github-elife-test-cluster
     ingress:
       enabled: "true"
       hosts:
