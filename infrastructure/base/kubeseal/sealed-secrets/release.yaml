@@ -4,7 +4,7 @@ metadata:
   name: sealed-secrets
   namespace: kubeseal
 spec:
-  releaseName: sealed-secrets
+  releaseName: sealed-secrets-controller
   chart:
     spec:
       chart: sealed-secrets
@@ -12,6 +12,6 @@ spec:
         kind: HelmRepository
         name: sealed-secrets
       version: "2.13.3"
+  interval: 1h0m0s
   values:
     namespace: kubeseal
-  interval: 1h0m0s
