@@ -21,6 +21,3 @@ spec:
     substitute:
       cluster_name: test
       cluster_domain: test.cluster.elifesciences.org
-
-      # service account arns
-      external_dns_service_account_role_arn: arn:aws:iam::512686554592:role/eksctl-test-cluster-ServiceRole-external-dns
