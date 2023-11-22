@@ -14,13 +14,9 @@ spec:
   interval: 1h0m0s
   values:
     vmsingle:
-      spec:
-        removePvcAfterDelete: true
-        storage:
-          accessModes:
-            - ReadWriteOnce
-      ingress:
-        enabled: false
+      enabled: false
+    vmcluster:
+      enabled: true
     grafana:
       sidecar:
         alerts:
