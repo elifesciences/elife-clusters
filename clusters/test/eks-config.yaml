@@ -40,6 +40,22 @@ iam:
       awsLoadBalancerController: true
     roleName: eksctl-test-cluster-ServiceRole-aws-load-balancer-controller
     roleOnly: true
+  - metadata:
+      name: external-secrets
+      namespace: external-secrets
+    attachPolicy:
+      Version: "2012-10-17"
+      Statement:
+      - Effect: Allow
+        Action:
+        - "secretsmanager:GetResourcePolicy"
+        - "secretsmanager:GetSecretValue"
+        - "secretsmanager:DescribeSecret"
+        - "secretsmanager:ListSecretVersionIds"
+        Resource:
+        - "arn:aws:secretsmanager:us-west-2:111122223333:secret:eksctl/test/*"
+    roleName: eksctl-test-cluster-ServiceRole-external-secrets
+    roleOnly: true
 
 iamIdentityMappings:
   - arn: arn:aws:iam::512686554592:user/ScottAubrey
