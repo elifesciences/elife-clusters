@@ -11,4 +11,6 @@ reclaimPolicy: Delete
 allowVolumeExpansion: true
 parameters:
   fsType: ext4
-  type: gp2
+  type: gp3
+  iops: "3000"
+  throughput: "125"
