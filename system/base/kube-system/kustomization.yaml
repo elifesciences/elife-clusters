@@ -5,3 +5,4 @@ resources:
 - descheduler
 - aws-load-balancer-controller
 - sealed-secrets
+- snapshot-controller
