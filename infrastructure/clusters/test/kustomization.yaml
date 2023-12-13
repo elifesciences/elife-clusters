@@ -7,4 +7,5 @@ resources:
 - ../../base/logging-system
 - ../../base/db-operator-system
 - ../../base/gemini
+- ../../base/template-controller
 - secrets
