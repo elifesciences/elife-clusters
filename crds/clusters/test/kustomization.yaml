@@ -4,3 +4,4 @@ resources:
 - ../../base/cert-manager
 - ../../base/prometheus-operator
 - ../../base/sealed-secrets
+- ../../base/csi-external-snapshotter
