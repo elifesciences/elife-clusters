@@ -4,7 +4,7 @@
     "scottaubrey"
   ],
   "flux": {
-    "fileMatch": ["^clusters/test/.+\\.yaml$", "^system/.+\\.yaml$", "^infrastructure/.+\\.yaml$", "^apps/.+\\.yaml$"]
+    "fileMatch": ["^clusters/test/flux/flux-system/gotk-components.yaml$", "^system/.+\\.yaml$", "^infrastructure/.+\\.yaml$", "^apps/.+\\.yaml$"]
   },
   "packageRules": [
     {
