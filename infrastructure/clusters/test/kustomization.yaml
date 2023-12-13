@@ -6,4 +6,5 @@ resources:
 - ../../base/monitoring-system
 - ../../base/logging-system
 - ../../base/db-operator-system
+- ../../base/gemini
 - secrets
