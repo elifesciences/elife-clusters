@@ -10,3 +10,4 @@ resources:
 - ../../base/external-dns
 - ../../base/storage-classes/eks-remove-default
 - ../../base/storage-classes/csi-ebs
+- ../../base/volume-snapshot-classes/csi-ebs
