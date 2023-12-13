@@ -53,7 +53,7 @@ iam:
         - "secretsmanager:DescribeSecret"
         - "secretsmanager:ListSecretVersionIds"
         Resource:
-        - "arn:aws:secretsmanager:us-west-2:111122223333:secret:eksctl/test/*"
+        - "arn:aws:secretsmanager:us-east-1:512686554592:secret:eksctl/test/*"
     roleName: eksctl-test-cluster-ServiceRole-external-secrets
     roleOnly: true
 
