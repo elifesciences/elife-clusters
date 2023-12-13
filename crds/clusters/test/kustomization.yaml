@@ -5,3 +5,4 @@ resources:
 - ../../base/prometheus-operator
 - ../../base/sealed-secrets
 - ../../base/csi-external-snapshotter
+- ../../base/external-secrets
