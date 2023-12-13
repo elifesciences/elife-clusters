@@ -5,4 +5,5 @@ resources:
 - ../../base/oauth2-proxy
 - ../../base/monitoring-system
 - ../../base/logging-system
+- ../../base/db-operator-system
 - secrets
