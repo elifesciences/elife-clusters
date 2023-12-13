@@ -14,7 +14,7 @@
     {
       "matchPackageNames": ["airflow"],
       "additionalBranchPrefix": "{{packageFile}}-",
-      "commitMessage": "{{{commitMessagePrefix}}} {{{commitMessageAction}}} {{{commitMessageTopic}}} {{{packageFile}}} {{{commitMessageExtra}}} {{{commitMessageSuffix}}}"
+      "commitMessageTopic": "dependency {{depName}} ({{{packageFile}}})"
     },
     {
       "matchFileNames": [".tool-versions"],
