@@ -80,7 +80,7 @@ gitops:
       owner: "elifesciences"
       repository: "elife-clusters"
       branch: "master"
-      path: "cluster/test/flux"
+      path: "clusters/test/flux"
       components-extra: "image-reflector-controller,image-automation-controller"
       read-write-key: "true"
 

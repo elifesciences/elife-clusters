@@ -4,7 +4,7 @@
     "scottaubrey"
   ],
   "flux": {
-    "fileMatch": ["^cluster/.+\\.yaml$", "^system/.+\\.yaml$", "^infrastructure/.+\\.yaml$", "^apps/.+\\.yaml$"]
+    "fileMatch": ["^clusters/.+\\.yaml$", "^system/.+\\.yaml$", "^infrastructure/.+\\.yaml$", "^apps/.+\\.yaml$"]
   },
   "packageRules": [
     {
