@@ -8,10 +8,11 @@
       "^clusters/.+\\.yaml$",
       "^system/.+\\.yaml$",
       "^infrastructure/.+\\.yaml$",
-      "^apps/.+\\.yaml$",
-      "\\.yaml$"
+      "^apps/.+\\.yaml$"
     ]
   },
+  "ignorePaths": [
+  ],
   "packageRules": [
     {
       "matchPackageNames": ["descheduler"],
