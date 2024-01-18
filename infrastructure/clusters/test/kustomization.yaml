@@ -8,4 +8,5 @@ resources:
 - ../../base/db-operator-system
 - ../../base/gemini
 - ../../base/template-controller
+- ../../base/temporal
 - secrets

@@ -1,0 +1,44 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: temporal-database
+  namespace: temporal
+
+spec:
+  interval: 1m
+  releaseName: temporal-database
+  chart:
+    spec:
+      chart: pxc-db
+      version: 1.13.4
+      sourceRef:
+        kind: HelmRepository
+        name: percona
+        namespace: db-operator-system
+      interval: 1m
+
+  values:
+    backup:
+      enabled: false
+    pxc:
+      resources:
+        requests:
+          memory: 800Mi
+          cpu: 600m
+      persistence:
+        storageClass: csi-ebs-gp3
+        size: 60Gi
+      readinessProbes:
+        initialDelaySeconds: 300
+        failureThreshold: 10
+      livenessProbes:
+        initialDelaySeconds: 300
+        failureThreshold: 10
+    haproxy:
+      annotations:
+        cluster-autoscaler.kubernetes.io/safe-to-evict: "true"
+      resources:
+        requests:
+          memory: 50Mi
+          cpu: 150m
