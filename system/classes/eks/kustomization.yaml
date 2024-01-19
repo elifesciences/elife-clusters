@@ -8,8 +8,14 @@ resources:
 - ../../base/autoscaler-system
 - ../../base/metrics-server
 - ../../base/external-dns
-- ../../base/storage-classes/eks-remove-default
-- ../../base/storage-classes/csi-ebs
-- ../../base/volume-snapshot-classes/csi-ebs
 - ../../base/external-secrets
+- services/aws-load-balancer-controller
+- storage-classes/eks-remove-default
+- storage-classes/csi-ebs
+- volume-snapshot-classes/csi-ebs
 - secret-store
+patches:
+- target:
+    kind: HelmRelease
+    name: cluster-autoscaler
+  path: patches/cluster-autoscaler.yaml

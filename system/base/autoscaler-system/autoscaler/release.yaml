@@ -16,13 +16,3 @@ spec:
   values:
     image:
       tag: v1.27.2
-    autoDiscovery:
-      clusterName: ${cluster_name}
-      tags:
-      - kubernetes.io/cluster/${cluster_name}
-    awsRegion: ${aws_region}
-    rbac:
-      serviceAccount:
-        name: cluster-autoscaler
-        annotations:
-          eks.amazonaws.com/role-arn: ${autoscaler_service_account_role_arn}

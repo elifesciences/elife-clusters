@@ -1,0 +1,17 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: cluster-autoscaler
+spec:
+  values:
+    autoDiscovery:
+      clusterName: ${cluster_name}
+      tags:
+      - kubernetes.io/cluster/${cluster_name}
+    awsRegion: ${aws_region}
+    rbac:
+      serviceAccount:
+        name: cluster-autoscaler
+        annotations:
+          eks.amazonaws.com/role-arn: ${autoscaler_service_account_role_arn}
