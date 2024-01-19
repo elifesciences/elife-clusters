@@ -12,6 +12,8 @@ spec:
       skipTaint: true
 
     # Make this run on the main kind node
+    nodeSelector:
+      kubernetes.io/hostname: end-to-end-test-control-plane
     tolerations:
     - key: "realnode"
       operator: "Equal"
