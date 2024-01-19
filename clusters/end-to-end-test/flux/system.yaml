@@ -1,0 +1,23 @@
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: system
+  namespace: flux-system
+spec:
+  interval: 10m0s
+  path: ./system/clusters/end-to-end-test
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  commonMetadata:
+    labels:
+      cluster: end-to-end-test
+      kustomization: system
+  dependsOn:
+  - name: crds
+  postBuild:
+    substitute:
+      cluster_name: end-to-end-test
+      cluster_domain: end-to-end-test.test.internal
