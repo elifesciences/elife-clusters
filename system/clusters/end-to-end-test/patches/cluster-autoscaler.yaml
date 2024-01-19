@@ -7,4 +7,6 @@ spec:
   values:
     cloudprovider: kwok
     autoDiscovery:
-      clusterName: "kind-kind"
+      clusterName: "end-to-end-test"
+    nodes:
+      skipTaint: true
