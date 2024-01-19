@@ -9,8 +9,3 @@ resources:
 - ../../base/metrics-server
 - ../../base/external-dns
 - ../../base/external-secrets
-patches:
-- target:
-    kind: HelmRelease
-    name: cluster-autoscaler
-  path: patches/cluster-autoscaler.yaml

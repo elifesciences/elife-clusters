@@ -5,3 +5,8 @@ commonLabels:
 resources:
 - ../../classes/kind
 - secret-store
+patches:
+- target:
+    kind: HelmRelease
+    name: cluster-autoscaler
+  path: patches/cluster-autoscaler.yaml
