@@ -4,3 +4,4 @@ commonLabels:
   service_type: system
 resources:
 - ../../classes/kind
+- secret-store
