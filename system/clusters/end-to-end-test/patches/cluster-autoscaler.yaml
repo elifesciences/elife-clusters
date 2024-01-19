@@ -5,7 +5,7 @@ metadata:
   name: cluster-autoscaler
 spec:
   values:
-    cloudprovider: kwok
+    cloudProvider: kwok
     autoDiscovery:
       clusterName: "end-to-end-test"
     nodes:
