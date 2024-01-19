@@ -10,3 +10,10 @@ spec:
       clusterName: "end-to-end-test"
     nodes:
       skipTaint: true
+
+    # Make this run on the main kind node
+    tolerations:
+    - key: "realnode"
+      operator: "Equal"
+      value: "true"
+      effect: "NoSchedule"
