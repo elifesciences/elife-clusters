@@ -3,3 +3,12 @@ kind: Kustomization
 commonLabels:
   service_type: system
 resources:
+- ../../base/kube-system
+- ../../base/certificate-system
+- ../../base/autoscaler-system
+- ../../base/metrics-server
+- ../../base/external-dns
+- ../../base/storage-classes/eks-remove-default
+- ../../base/storage-classes/csi-ebs
+- ../../base/volume-snapshot-classes/csi-ebs
+- ../../base/external-secrets
