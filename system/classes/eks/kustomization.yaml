@@ -12,3 +12,4 @@ resources:
 - ../../base/storage-classes/csi-ebs
 - ../../base/volume-snapshot-classes/csi-ebs
 - ../../base/external-secrets
+- secret-store
