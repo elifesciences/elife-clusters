@@ -14,3 +14,20 @@ spec:
       operator: "Equal"
       value: "true"
       effect: "NoSchedule"
+    webhook:
+      nodeSelector:
+        kubernetes.io/hostname: end-to-end-test-control-plane
+      tolerations:
+      - key: "realnode"
+        operator: "Equal"
+        value: "true"
+        effect: "NoSchedule"
+
+    certController:
+      nodeSelector:
+        kubernetes.io/hostname: end-to-end-test-control-plane
+      tolerations:
+      - key: "realnode"
+        operator: "Equal"
+        value: "true"
+        effect: "NoSchedule"
