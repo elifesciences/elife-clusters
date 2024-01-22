@@ -39,5 +39,6 @@ spec:
             - configmaps
             resourceNames:
             - kwok-provider-config
+            - kwok-provider-templates
             verbs:
             - get
