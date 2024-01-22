@@ -15,12 +15,17 @@ patches:
     kind: HelmRelease
     name: cert-manager
     namespace: certificate-system
-  path: patches/cert-manager/run-on-realnode.yaml
+  path: patches/run-on-realnode/cert-manager.yaml
 - target:
     kind: HelmRelease
     name: external-secrets
-    namespace: certificate-system
-  path: patches/external-secrets/run-on-realnode.yaml
+    namespace: external-secrets
+  path: patches/run-on-realnode/external-secrets.yaml
+- target:
+    kind: HelmRelease
+    name: metrics-server
+    namespace: metrics-server
+  path: patches/run-on-realnode/metrics-server.yaml
 configMapGenerator:
 - name: kwok-provider-config
   namespace: autoscaler-system

@@ -1,0 +1,15 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: metrics-server
+spec:
+  values:
+    # Make this run on the main node
+    tolerations:
+    - key: "realnode"
+      operator: "Equal"
+      value: "true"
+      effect: "NoSchedule"
+    nodeSelector:
+      kubernetes.io/hostname: elife-flux-test-control-plane
