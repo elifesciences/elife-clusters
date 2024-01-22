@@ -42,3 +42,13 @@ spec:
             - kwok-provider-templates
             verbs:
             - get
+          - apiGroups:
+            - ""
+            resources:
+            - nodes
+            resourceNames:
+            verbs:
+            - create
+            - delete
+            - update
+            - get
