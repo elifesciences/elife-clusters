@@ -13,3 +13,27 @@ spec:
       operator: "Equal"
       value: "true"
       effect: "NoSchedule"
+    webhook:
+      nodeSelector:
+        kubernetes.io/hostname: end-to-end-test-control-plane
+      tolerations:
+      - key: "realnode"
+        operator: "Equal"
+        value: "true"
+        effect: "NoSchedule"
+    cainjector:
+      nodeSelector:
+        kubernetes.io/hostname: end-to-end-test-control-plane
+      tolerations:
+      - key: "realnode"
+        operator: "Equal"
+        value: "true"
+        effect: "NoSchedule"
+    startupapicheck:
+      nodeSelector:
+        kubernetes.io/hostname: end-to-end-test-control-plane
+      tolerations:
+      - key: "realnode"
+        operator: "Equal"
+        value: "true"
+        effect: "NoSchedule"
