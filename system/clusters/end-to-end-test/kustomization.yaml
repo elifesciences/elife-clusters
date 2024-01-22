@@ -21,11 +21,6 @@ patches:
     name: external-secrets
     namespace: certificate-system
   path: patches/external-secrets/run-on-realnode.yaml
-- target:
-    kind: HelmRelease
-    name: ingress-nginx
-    namespace: ingress-system
-  path: patches/ingress-nginx/run-on-realnode.yaml
 configMapGenerator:
 - name: kwok-provider-config
   namespace: autoscaler-system
