@@ -15,7 +15,12 @@ patches:
     kind: HelmRelease
     name: cert-manager
     namespace: certificate-system
-  path: patches/cluster-autoscaler/cert-manager.yaml
+  path: patches/cert-manager/run-on-realnode.yaml
+- target:
+    kind: HelmRelease
+    name: external-secrets
+    namespace: certificate-system
+  path: patches/external-secrets/run-on-realnode.yaml
 configMapGenerator:
 - name: kwok-provider-config
   namespace: autoscaler-system
