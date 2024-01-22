@@ -22,7 +22,7 @@ spec:
       operator: "Equal"
       value: "true"
       effect: "NoSchedule"
-  postRenders:
+  postRenderers:
   - kustomize:
       patches:
       - target:
