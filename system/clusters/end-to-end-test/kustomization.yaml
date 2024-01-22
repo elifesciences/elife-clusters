@@ -26,6 +26,16 @@ patches:
     name: metrics-server
     namespace: metrics-server
   path: patches/run-on-realnode/metrics-server.yaml
+- target:
+    kind: HelmRelease
+    name: descheduler
+    namespace: kube-system
+  path: patches/run-on-realnode/descheduler.yaml
+- target:
+    kind: HelmRelease
+    name: sealed-secrets
+    namespace: kube-system
+  path: patches/run-on-realnode/sealed-secrets.yaml
 configMapGenerator:
 - name: kwok-provider-config
   namespace: autoscaler-system
