@@ -1,0 +1,4 @@
+apiVersion: v1alpha1
+readNodesFrom: cluster
+nodegroups:
+  fromNodeLabelKey: "kwok-nodegroup"

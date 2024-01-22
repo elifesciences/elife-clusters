@@ -9,4 +9,10 @@ patches:
 - target:
     kind: HelmRelease
     name: cluster-autoscaler
-  path: patches/cluster-autoscaler.yaml
+  path: patches/cluster-autoscaler/kwok-provider.yaml
+configMapGenerator:
+- name: kwok-provider-config
+  files:
+  - config=config/config.yaml
+  options:
+    disableNameSuffixHash: true

@@ -12,6 +12,7 @@ spec:
       clusterName: "end-to-end-test"
     nodes:
       skipTaint: true
+    kwokConfigMapName: kwok-provider-config
 
     # Make this run on the main kind node
     nodeSelector:
