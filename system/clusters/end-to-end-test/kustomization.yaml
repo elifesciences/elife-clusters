@@ -9,9 +9,11 @@ patches:
 - target:
     kind: HelmRelease
     name: cluster-autoscaler
+    namespace: autoscaler-system
   path: patches/cluster-autoscaler/kwok-provider.yaml
 configMapGenerator:
 - name: kwok-provider-config
+  namespace: autoscaler-system
   files:
   - config=config/config.yaml
   options:
