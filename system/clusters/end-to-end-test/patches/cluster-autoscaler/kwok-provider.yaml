@@ -28,7 +28,7 @@ spec:
       - target:
           kind: ClusterRole
         patch: |
-          - op: replace
+          - op: add
             path: /rules/-
             value:
               apiGroups:
@@ -40,7 +40,7 @@ spec:
               - kwok-provider-templates
               verbs:
               - get
-          - op: replace
+          - op: add
             path: /rules/-
             value:
               apiGroups:
