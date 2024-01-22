@@ -22,3 +22,22 @@ spec:
       operator: "Equal"
       value: "true"
       effect: "NoSchedule"
+  postRenders:
+  - kustomize:
+      patches:
+      - target:
+          kind: Role
+        patch: |
+          apiVersion: rbac.authorization.k8s.io/v1
+          kind: Role
+          metadata:
+            name: cluster-autoscaler-kwok-cluster-autoscaler
+          rules:
+          - apiGroups:
+            - ""
+            resources:
+            - configmaps
+            resourceNames:
+            - kwok-provider-config
+            verbs:
+            - get
