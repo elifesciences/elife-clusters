@@ -26,10 +26,10 @@ spec:
   - kustomize:
       patches:
       - target:
-          kind: Role
+          kind: ClusterRole
         patch: |
           apiVersion: rbac.authorization.k8s.io/v1
-          kind: Role
+          kind: ClusterRole
           metadata:
             name: cluster-autoscaler-kwok-cluster-autoscaler
           rules:
