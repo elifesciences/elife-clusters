@@ -15,6 +15,12 @@ configMapGenerator:
 - name: kwok-provider-config
   namespace: autoscaler-system
   files:
-  - config=config/config.yaml
+  - config=config/kwok-provider-config.yaml
+  options:
+    disableNameSuffixHash: true
+- name: kwok-provider-templates
+  namespace: autoscaler-system
+  files:
+  - templates=config/kwok-provider-templates.yaml
   options:
     disableNameSuffixHash: true

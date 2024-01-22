@@ -1,4 +1,6 @@
 apiVersion: v1alpha1
-readNodesFrom: cluster
+readNodesFrom: configmap
+configmap:
+  name: kwok-provider-templates
 nodegroups:
   fromNodeLabelKey: "kwok-nodegroup"
