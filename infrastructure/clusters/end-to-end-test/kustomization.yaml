@@ -14,4 +14,9 @@ patches:
     kind: HelmRelease
     name: ingress-nginx
     namespace: ingress-system
-  path: patches/ingress-nginx/run-on-realnode.yaml
+  path: patches/run-on-realnode/ingress-nginx.yaml
+- target:
+    kind: HelmRelease
+    name: template-controller
+    namespace: template-controller
+  path: patches/run-on-realnode/template-controller.yaml
