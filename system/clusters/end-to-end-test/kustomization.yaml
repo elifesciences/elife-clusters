@@ -12,6 +12,11 @@ patches:
     namespace: autoscaler-system
   path: patches/cluster-autoscaler/kwok-provider.yaml
 - target:
+    kind: Deployment
+    name: external-snapshotter
+    namespace: kube-system
+  path: patches/run-on-realnode/external-snapshotter.yaml
+- target:
     kind: HelmRelease
     name: cert-manager
     namespace: certificate-system
