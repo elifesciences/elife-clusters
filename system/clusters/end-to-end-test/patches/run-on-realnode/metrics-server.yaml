@@ -5,6 +5,8 @@ metadata:
   name: metrics-server
 spec:
   values:
+    args:
+    - --kubelet-insecure-tls
     # Make this run on the main node
     nodeSelector:
       kubernetes.io/hostname: end-to-end-test-control-plane
