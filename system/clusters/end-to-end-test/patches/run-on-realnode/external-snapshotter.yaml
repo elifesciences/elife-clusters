@@ -1,16 +1,16 @@
----
-kind: Deployment
-apiVersion: apps/v1
-metadata:
-  name: snapshot-controller
-  namespace: kube-system
-spec:
-  template:
-    spec:
-      nodeSelector:
-        kubernetes.io/hostname: end-to-end-test-control-plane
-      tolerations:
-      - key: "realnode"
-        operator: "Equal"
-        value: "true"
-        effect: "NoSchedule"
+- op: add
+  path: /spec/template/spec/nodeSelector
+  value: {}
+- op: add
+  path: /spec/template/spec/nodeSelector/kubernetes.io~1hostname
+  value: "end-to-end-test-control-plane"
+- op: add
+  path: /spec/template/spec/tolerations
+  value: []
+- op: add
+  path: /spec/template/spec/tolerations/-
+  value:
+    key: "realnode"
+    operator: "Equal"
+    value: "true"
+    effect: "NoSchedule"
