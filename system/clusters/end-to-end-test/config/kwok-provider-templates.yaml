@@ -15,7 +15,7 @@ items:
       kubernetes.io/os: linux
       kubernetes.io/role: agent
       node-role.kubernetes.io/agent: ""
-      kwok-nodegroup: kwok-node-t3-large
+      node.kubernetes.io/instance-type: kwok-node-t3-large
       type: kwok
     name: kwok-node
   status:

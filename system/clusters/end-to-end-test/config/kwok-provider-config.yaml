@@ -1,8 +1,8 @@
 apiVersion: v1alpha1
-readNodesFrom: configmap
+readNodesFrom: cluster
 configmap:
   name: kwok-provider-templates
 nodegroups:
-  fromNodeLabelKey: "kwok-nodegroup"
+  fromNodeLabelKey: "node.kubernetes.io/instance-type"
 nodes:
   skipTaint: true
