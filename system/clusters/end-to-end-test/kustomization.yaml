@@ -13,7 +13,7 @@ patches:
   path: patches/cluster-autoscaler/kwok-provider.yaml
 - target:
     kind: Deployment
-    name: external-snapshotter
+    name: snapshot-controller
     namespace: kube-system
   path: patches/run-on-realnode/external-snapshotter.yaml
 - target:
