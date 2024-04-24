@@ -1,3 +1,5 @@
+# NOTE: this is not maintained anymore
+
 # eLife Kubernetes cluster configurations
 
 This repo defines the cluster configurations in use at eLife. Everything from the EKS cluster configs (driven by [eksctl](https://eksctl.io/)) to flux manifests that are automatically applied from the master branch in this repo.
